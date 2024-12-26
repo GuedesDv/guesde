@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site com Scroll Reveal</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+</head>
+<body>
+    <div class="background">
+        <div class="content">
+            <img src="head.png" alt="Logo" class="logo">
+            <div class="line"></div>
+            <h1 class="site-name">www.guedesdev.shop</h1>
+            
+            <h2 class="site-info">
+                Estamos temporariamente em manutenção. Voltaremos em breve!
+                Visando o futuro, inovando para você!</h2>
+            <h2 class="site-info">Entre em contato pelo e-mail: devgueds@gmail.com.</h2>
+        </div>
+    </div>
+    
+    <script>
+
+        // Efeito de redução da logo ao rolar a página
+        window.addEventListener('scroll', () => {
+            const logo = document.querySelector('.logo');
+            if (window.scrollY > 50) {
+                logo.classList.add('shrink');
+            } else {
+                logo.classList.remove('shrink');
+            }
+        });
+
+        // Scroll Reveal para elementos
+        ScrollReveal().reveal('.line', {
+            delay: 300,
+            origin: 'bottom',
+            distance: '50px',
+            duration: 1000
+        });
+
+        ScrollReveal().reveal('.site-name', {
+            delay: 600,
+            origin: 'bottom',
+            distance: '50px',
+            duration: 1000
+        });
+    </script>
+</body>
+</html>

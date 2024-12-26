@@ -1,0 +1,70 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.background {
+    background: url('background.png') no-repeat center center/cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    filter: brightness(0.8) contrast(1.2);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    animation: rotateBackground 60s linear infinite;
+}
+
+.content {
+    text-align: center;
+}
+
+.logo {
+    width: 20rem;
+    height: auto;
+    transition: transform 0.5s ease-in-out;
+    animation: swing 3s ease-in-out infinite alternate;
+}
+
+.logo:hover {
+    transform: scale(0.4); /* Reduz para 20rem (0.4 de 50rem) */
+}
+
+.line {
+    width: 50%;
+    height: 2px;
+    background: #fff;
+    margin: 1rem auto;
+}
+
+.site-name {
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 1rem;
+    text-shadow: 1px 1px 5px #000;
+}
+
+.site-info {
+    font-size: 2rem;
+    color: #fff;
+    margin-top: 1rem;
+    text-shadow: 1px 1px 5px #000;
+}
+
+
+/* Animação de balanço */
+@keyframes swing {
+    0% {
+        transform: rotate(-3deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+    100% {
+        transform: rotate(-3deg);
+    }
+}
